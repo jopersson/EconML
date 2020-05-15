@@ -697,7 +697,7 @@ class TestDML(unittest.TestCase):
     def test_can_use_featurizer(self):
         "Test that we can use a featurizer, and that fit is only called during training"
         dml = LinearDMLCateEstimator(LinearRegression(), LinearRegression(),
-                                     fit_cate_intercept=False, featurizer=OneHotEncoder(n_values='auto', sparse=False))
+                                     fit_cate_intercept=False, featurizer=OneHotEncoder(sparse=False))
 
         T = np.tile([1, 2, 3], 6)
         Y = np.array([1, 2, 3, 1, 2, 3])
